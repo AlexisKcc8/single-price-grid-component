@@ -1,18 +1,47 @@
 //Colors
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 //*Primary
-$Cyan: hsl(179, 62%, 43%);
-$BrightYellow: hsl(71, 73%, 54%);
+$background-monthly: hsl(179, 62%, 43%);
+$background-bottom: hsl(71, 73%, 54%);
 
 //?Neutral
 $LightGray: hsl(204, 43%, 93%);
-$GrayishBlue: hsl(218, 22%, 67%);
-
+$background-why: hsl(218, 22%, 67%);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
-    background: $BrightYellow;
+    background: $LightGray;
     font-size: 16px;
     height: 100vh;
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* This is better for small screens, once min() is better supported */
+  /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+    // gap: 1rem;
+    &__joinCommunity{
+        border:1px solid red;
+        
+    }
+    &__monthly{
+        border:1px solid blue;
+        background-color: $background-monthly;
+    }
+    &__whyUs{
+        border:1px solid green;
+        background-color: $background-why;
+    }
 }
 
 

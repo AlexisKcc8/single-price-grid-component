@@ -1,5 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: #c0df34;
+  background: #e5eff5;
   font-size: 16px;
   height: 100vh;
+  font-family: 'Karla', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* This is better for small screens, once min() is better supported */
+  /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+}
+
+.grid-container__joinCommunity {
+  border: 1px solid red;
+}
+
+.grid-container__monthly {
+  border: 1px solid blue;
+  background-color: #2ab2af;
+}
+
+.grid-container__whyUs {
+  border: 1px solid green;
+  background-color: #98a6bd;
 }

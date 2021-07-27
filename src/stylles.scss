@@ -2,18 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 //*Primary
-$background-monthly: hsl(179, 62%, 43%);
-$background-bottom: hsl(71, 73%, 54%);
+$blue-dark: hsl(179, 62%, 43%);
+$green-limon: hsl(71, 73%, 54%);
 
 //?Neutral
 $LightGray: hsl(204, 43%, 93%);
-$background-why: hsl(218, 22%, 67%);
+
+$gray:hsl(0, 0%, 70%);
+$blue-linght: hsl(178, 62%, 50%);
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     background: $LightGray;
     font-size: 16px;
@@ -27,20 +28,50 @@ body{
 .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  /* This is better for small screens, once min() is better supported */
-  /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
-    // gap: 1rem;
+    width: 90%;
+    height: calc(100vh - 20%);
+    font-size: 1rem;
+    color:$LightGray;
+    &__joinCommunity,
+    &__monthly,
+    &__whyUs{
+        width: 100%;
+        height: 15rem;
+        padding: 1rem;
+        text-align: left;
+    }
+
     &__joinCommunity{
-        border:1px solid red;
-        
+        background-color: white;
+        &-title{
+            color:$blue-dark;
+        }
+        &-sub-title{
+            color:$green-limon;
+        }
+        &-description{
+            color:$gray;
+        }
     }
     &__monthly{
-        border:1px solid blue;
-        background-color: $background-monthly;
+        background-color: $blue-dark;
+        &-title{
+
+        }
+        &-description{
+            &-price{
+
+            }
+            &-textPrice{
+
+            }
+        } 
+        &-singUp{
+            background-color: $green-limon;
+        }
     }
     &__whyUs{
-        border:1px solid green;
-        background-color: $background-why;
+        background-color: $blue-linght;
     }
 }
 

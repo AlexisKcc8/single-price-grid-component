@@ -18,28 +18,41 @@ $blue-linght: hsl(178, 62%, 50%);
 body{
     background: $LightGray;
     font-size: 16px;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Karla', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px 20px;
 }
 
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    width: 90%;
-    height: calc(100vh - 20%);
-    font-size: 1rem;
+    grid-template-columns: 100%;
+    max-width: 550px;
+    overflow: hidden;
+    font-size: 0.625rem;
     color:$LightGray;
+    box-shadow: 0px 4px 9px -1px rgba(121, 119, 119, 0.452);
     &__joinCommunity,
     &__monthly,
     &__whyUs{
-        width: 100%;
-        height: 15rem;
-        padding: 1rem;
         text-align: left;
+        height: 250px;
+        padding: 30px;
     }
+    &__joinCommunity-title,
+    &__monthly-title,
+    &__whyUs-title{
+        font-size: 1.9em;
+    }
+    &__joinCommunity-description,
+    &__monthly-description,
+    &__whyUs-description{
+        font-size: 1.5em;
+        line-height: 1.7em;
+    }
+
 
     &__joinCommunity{
         background-color: white;
@@ -48,31 +61,58 @@ body{
         }
         &-sub-title{
             color:$green-limon;
+            margin:1.2em 0 ;
         }
         &-description{
             color:$gray;
+            
         }
     }
     &__monthly{
         background-color: $blue-dark;
-        &-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 
-        }
+        // &-title{
+
+        // }
         &-description{
+            &-price,
+            &-textPrice{
+                display:inline-block;
+            }
             &-price{
-
+                color:#fff;
+                font-size: 2.3em;
+                padding: .3em 0;
+               
             }
             &-textPrice{
-
+                color:hsla(0, 4%, 89%, 0.692);
+                margin: 0 .5em;
             }
+            margin: 0 0 .8em 0;
         } 
         &-singUp{
             background-color: $green-limon;
+            height: 3.5em;
+            font-size: 1.4em;
+            border:none;
+            border-radius:5px;
+            color:#fff;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.425);
         }
     }
     &__whyUs{
         background-color: $blue-linght;
+        &-description{
+            margin: 1em 5em 1em 0;
+            text-align: left;
+        }
     }
 }
+
+@import "media-stylles";
 
 
